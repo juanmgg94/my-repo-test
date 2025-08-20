@@ -1,0 +1,15 @@
+1. Clone the repository 
+
+2. Create new branch 
+
+3. Stage changes 
+
+4. Make commit 
+
+5. Push changes to the remote branch 
+
+6. Opem merge request (MR)
+
+7. Address MR code review feedback 
+
+8. merge
