@@ -1,5 +1,22 @@
-# This script was created in juan branch 
+from selenium import webdriver
+import time
 
-def my_function(x):
 
-    return 3*x
+driver = webdriver.Chrome()
+
+
+driver.get("https://www.google.com")
+
+
+driver.maximize_window()
+
+title = driver.title 
+
+url = driver.current_url
+
+print(title)
+print(url)
+
+time.sleep(2)
+
+

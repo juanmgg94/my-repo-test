@@ -1,15 +1,40 @@
-1. Clone the repository 
+Automating the submit Button and Verifying the Sucess Message 
 
-2. Create new branch 
+The tutorial demostrates a practical example of using XPath and CSS selector
 
-3. Stage changes 
+1. Clicking the Submit Button 
 
-4. Make commit 
+The submit button on the form doesn't have a unique ID or name. However, it does have a type attribute with the value submit 
 
-5. Push changes to the remote branch 
+//input[type='submit']
 
-6. Opem merge request (MR)
+driver.find_element(By.XPath, "//input[type='submit']")
 
-7. Address MR code review feedback 
+.click() 
 
-8. merge
+Grabing and validating the success Message
+
+After the form is submitted, a success message appears. The speaker explains how to locate this message and verify its content 
+
+The success message has a class attribute with multiple values: 
+
+"alert", "alert-success", and "alert-dismissible" 
+
+The speaker chooses to use "alert-success"  as the class name locator because it's specific to the success message 
+
+driver.find_element(By.CLASS_NAME, "alert-success")
+
+
+
+Retriving text: To validate the message, you need to get the text from the element. 
+
+.text: This property retrieves the visible text content of the element 
+
+The code stores the retrieved text in a variable: 
+
+message = driver.find_element(By.CLASS_NAME, "alert-success").text 
+
+Assertion for Validation: 
+
+The speaker introduces the assert statement to validate that the retrieved message is correct. An assertion is a key part of automated testing 
+
